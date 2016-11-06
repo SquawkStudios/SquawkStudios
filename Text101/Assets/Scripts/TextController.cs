@@ -14,7 +14,10 @@ public class TextController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Space)) {
-			text.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu imperdiet magna. Nunc pulvinar sem sit amet suscipit vestibulum. Morbi tristique magna quis tellus consectetur porta. Proin vel sodales nisi, congue finibus velit. Fusce auctor est urna, nec fermentum mi finibus sed.";
+			text.text = "You are in a prison cell, and you want to escape. There are " +
+			"some dirty sheets on the bed, a mirror on the wall and the door " + 
+			"is locked from the outside.\n\n" +
+			"Press S to view sheets. Pres M to view mirror and L to view lock";
 		}
 	}
 }
