@@ -33,7 +33,31 @@ public class NumberWizard : MonoBehaviour {
 		print("Is the number lower or higher than " + guess + "?");
 		print("Up = higher, Down = lower, Return = equal.");
 		
+		UserInput();
+		
 		max = max + 1;
+	}
+	
+	void UserInput () {
+		if ((Input.GetKeyDown (KeyCode.Keypad1))||(Input.GetKeyDown (KeyCode.Alpha1))){
+			print ("You've Selected the Range from 1 - 100 :");
+			max = 100 + 1;
+			NextGuess();
+			
+		} else if ((Input.GetKeyDown (KeyCode.Keypad2))||(Input.GetKeyDown (KeyCode.Alpha2))){
+			print ("You've Selected the Range from 1 - 1000 :");
+			max = 1000 + 1;
+			NextGuess();
+			
+		} else if ((Input.GetKeyDown (KeyCode.Keypad3))||(Input.GetKeyDown (KeyCode.Alpha3))){
+			print ("You've Selected the Range from 1 - 10000 :");
+			max = 10000;
+			
+		} else if ((Input.GetKeyDown (KeyCode.Keypad4))||(Input.GetKeyDown (KeyCode.Alpha4))){
+			print ("You've Selected the Range from 1 - 100000 :");
+			max = 100000 + 1;
+			NextGuess();
+		} 
 	}
 	
 	// Update is called once per frame
